@@ -1,7 +1,7 @@
 {
   "name": "react-native-speedometer",
   "version": "1.0.0",
-  "description": "A Customization Speedometer Implementation in React Native",
+  "description": "A Customizable Speedometer Implementation in React Native",
   "main": "src/index.js",
   "scripts": {
     "test": "jest",

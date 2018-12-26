@@ -1,0 +1,27 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": [
+    "react-native"
+  ],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "react/jsx-no-bind": "off",
+    "react/no-string-refs": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "(state|dispatch)" }],
+    "new-cap": ["error", {"capIsNewExceptions": ["Immutable"]}],
+    "import/no-extraneous-dependencies": "off",
+    "no-console": "off",
+    "react/jsx-filename-extension": "off",
+    "global-require": "off",
+    "no-alert": "off",
+    "react/forbid-prop-types": "off",
+    "class-methods-use-this": "off",
+    "react/no-unused-prop-types": "warn",
+    "react/prefer-stateless-function": ["error", {"ignorePureComponents": true}],
+    "react/require-default-props": "off"
+  }
+}
