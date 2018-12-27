@@ -19,7 +19,7 @@ import limitValue from './utils/limit-value';
 import style, { width as deviceWidth } from './style';
 
 // eslint-disable-next-line react/prefer-stateless-function
-class CircularPasswordStrengthDisplay extends Component {
+class Speedometer extends Component {
   constructor(props) {
     super(props);
     this.speedometerValue = new Animated.Value(props.defaultValue);
@@ -66,14 +66,16 @@ class CircularPasswordStrengthDisplay extends Component {
           {labels.map((level, index) => {
             const circleDegree = 90 + (index * perLevelDegree);
             return (
-              <View style={[style.halfCircle, {
-                backgroundColor: level.activeBarColor,
-                transform: [
-                  { translateX: deviceWidth / 4 - 5 },
-                  { rotate: `${circleDegree}deg` },
-                  { translateX: (deviceWidth / 4 * -1 - 5) },
-                ],
-              }]}
+              <View
+                key={index}
+                style={[style.halfCircle, {
+                  backgroundColor: level.activeBarColor,
+                  transform: [
+                    { translateX: deviceWidth / 4 - 5 },
+                    { rotate: `${circleDegree}deg` },
+                    { translateX: (deviceWidth / 4 * -1 - 5) },
+                  ],
+                }]}
               />
             );
           })}
@@ -102,7 +104,7 @@ class CircularPasswordStrengthDisplay extends Component {
   }
 }
 
-CircularPasswordStrengthDisplay.defaultProps = {
+Speedometer.defaultProps = {
   defaultValue: 50,
   minValue: 0,
   maxValue: 100,
@@ -150,7 +152,7 @@ CircularPasswordStrengthDisplay.defaultProps = {
   labelNoteStyle: {},
 };
 
-CircularPasswordStrengthDisplay.propTypes = {
+Speedometer.propTypes = {
   value: PropTypes.number.isRequired,
   defaultValue: PropTypes.number,
   minValue: PropTypes.number,
@@ -168,4 +170,4 @@ CircularPasswordStrengthDisplay.propTypes = {
   labelNoteStyle: PropTypes.object,
 };
 
-export default CircularPasswordStrengthDisplay;
+export default Speedometer;
