@@ -8,7 +8,7 @@ export default class App extends React.Component {
     value: 0,
   }
 
-  onChange = value => this.setState({ value })
+  onChange = value => this.setState({value: Number(value)})
 
   render() {
     return (
