@@ -14,8 +14,9 @@
     "url": "git+https://github.com/pritishvaidya/react-native-speedometer.git"
   },
   "keywords": [
-    "react-native",
-    "speedometer"
+    "react-native-speedometer",
+    "speedometer",
+    "speedometer-progress"
   ],
   "author": "Pritish Vaidya ",
   "license": "MIT",
