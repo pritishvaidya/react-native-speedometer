@@ -1,4 +1,4 @@
-# react-native-speedometer  [![npm version](https://badge.fury.io/js/react-native-speedometer.svg)](https://badge.fury.io/js/react-native-speedometer)
+# react-native-speedometer  [![npm version](https://badge.fury.io/js/react-native-speedometer.svg)](https://badge.fury.io/js/react-native-speedometer) [![npm downloads](https://img.shields.io/npm/dt/react-native-speedometer.svg)](https://npm-stat.com/charts.html?package=react-native-speedometer&from=2018-02-17&to=2018-12-28)
 
 
 A Customizable Speedometer Implementation in React Native
