@@ -1,4 +1,6 @@
-# react-native-speedometer
+# react-native-speedometer  [![npm version](https://badge.fury.io/js/react-native-speedometer.svg)](https://badge.fury.io/js/react-native-speedometer) [![npm downloads](https://img.shields.io/npm/dt/react-native-speedometer.svg)](https://npm-stat.com/charts.html?package=react-native-speedometer&from=2018-02-17&to=2018-12-28)
+
+
 A Customizable Speedometer Implementation in React Native
 
 
@@ -72,7 +74,7 @@ const styles = StyleSheet.create({
 | maxValue | 100 | number | Maximum Value |
 | easeDuration | 500| number | Ease Duration for the Needle animation |
 | labels | [Default Labels](#defaults) | array | Labels List |
-| needleImage | [Default Needle Image](#defaults) | `string` | Absolute path to the Needle Image |
+| needleImage | [Default Needle Image](#defaults) | string | Absolute path to the Needle Image |
 | wrapperStyle | {} | object | Wrapper Style |
 | outerCircleStyle   | {} | object | Outer Circle Style |
 | imageWrapperStyle | {} | object | Needle Image Wrapper Style |
