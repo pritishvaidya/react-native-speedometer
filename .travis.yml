@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- 10
+- 8
+notifications:
+  email:
+    recipients:
+    - pritishvaidya94@gmail.com
+    on_success: never
+    on_failure: always
