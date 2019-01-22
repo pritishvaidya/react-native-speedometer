@@ -1,24 +1,16 @@
-import React from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+/* eslint radix: ["error", "as-needed"] */
+/* eslint-disable react/destructuring-assignment */
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
 
+import React, { Component } from 'react';
+import { SafeAreaView, StyleSheet, TextInput } from 'react-native';
 import RNSpeedometer from 'react-native-speedometer';
-
-export default class App extends React.Component {
-  state = {
-    value: 0,
-  }
-
-  onChange = value => this.setState({ value: parseInt(value) })
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <TextInput placeholder="Speedometer Value" style={styles.textInput} onChangeText={this.onChange} />
-        <RNSpeedometer value={this.state.value} />
-      </View>
-    );
-  }
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -33,3 +25,21 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
 });
+
+type Props = {};
+export default class App extends Component<Props> {
+  state = {
+    value: 0,
+  };
+
+  onChange = value => this.setState({ value: parseInt(value) });
+
+  render() {
+    return (
+      <SafeAreaView style={styles.container}>
+        <TextInput placeholder="Speedometer Value" style={styles.textInput} onChangeText={this.onChange} />
+        <RNSpeedometer value={this.state.value} />
+      </SafeAreaView>
+    );
+  }
+}

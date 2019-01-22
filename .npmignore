@@ -1,6 +1,8 @@
-# Dotfiles
-.babelrc
-.eslintrc.json
-
-# Example
+.idea
 example
+node_modules
+dist
+.DS_Store
+.vscode
+*.log
+coverage
