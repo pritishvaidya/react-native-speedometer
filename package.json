@@ -4,21 +4,34 @@
   "description": "A Customizable Speedometer Implementation in React Native",
   "main": "src/index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
+    "prepublishOnly": "run-s build",
+    "prepack": "run-s build",
+    "build": "rollup -c",
     "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint . --ignore-path .gitignore --ext .js --ext .jsx",
-    "fix-lint": "yarn lint -- --fix",
-    "prepush": "npm run lint"
+    "fix-lint": "yarn lint -- --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pritishvaidya/react-native-speedometer.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
+    "react-native",
     "react-native-speedometer",
     "speedometer",
     "speedometer-progress"
   ],
-  "author": "Pritish Vaidya ",
+  "author": {
+    "name": "Pritish Vaidya",
+    "email": "pritishvaidya94@gmail.com",
+    "url": "pritishvaidya.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pritishvaidya/react-native-speedometer/issues"
@@ -26,7 +39,7 @@
   "homepage": "https://github.com/pritishvaidya/react-native-speedometer#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "babel-preset-react-native": "^4.0.1",
+    "check-prop-types": "^1.1.2",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-standard": "^12.0.0",
@@ -37,7 +50,14 @@
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-react-native": "^3.3.0",
     "eslint-plugin-standard": "^4.0.0",
-    "husky": "^1.1.0"
+    "husky": "^1.1.0",
+    "jest": "^23.6.0",
+    "jest-extended": "^0.11.0",
+    "lint-staged": "^8.1.0",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.7.0",
+    "react-native": "^0.57.8",
+    "react-test-renderer": "^16.7.0"
   },
   "peerDependencies": {
     "react": "^16.5.2",
@@ -45,5 +65,31 @@
   },
   "dependencies": {
     "prop-types": "^15.6.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupTestFrameworkScriptFile": "jest-extended",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/"
+    ]
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "**/test/*.js"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
