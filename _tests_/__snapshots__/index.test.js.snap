@@ -228,7 +228,7 @@ exports[`Main Component Tests main component details should render the component
       <Image
         source={
           Object {
-            "testUri": "../../../src/images/speedometer-needle.png",
+            "testUri": "../../../images/speedometer-needle.png",
           }
         }
         style={
