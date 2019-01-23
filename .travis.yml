@@ -2,6 +2,15 @@ language: node_js
 node_js:
 - 10
 - 8
+addons:
+  code_climate:
+    repo_token:
+      secure: "Gh5dw7JV/XKlOvJyYvll+SFww9SbRS+f3z2XEmz7DQp4jVkmW7SpHDlomX6KllSWJSdMu8Wxa9eznP+litXfifgFvUPrO/FioBC7rO9ymrob/MZs0/WEjuNrUTMjXCuR/XmhbBqHRAOE018FzbNEGyoWdJpLupIOPbA12zqNv9z1xZ1qkEc7HsoUkqknDSNGVBvs/OYf3lxN4no4KvuoKb1v72z6DF1IThWsXeYacGwDF1IwYLucpC+Niy57tjQMKM0a6p6z3HL469Gh/3Sp5am+X+nB5S/Xn6x8Q9BV0c9GeqmItm5AtLeHUkDZ8teMin8JNiLkcsGr6j2pkA4cDr4momLHr3wsk5JtV7edqfhIYqY0SY06+R6a96PzXnchp8TGTjSfkux43Q5UMporTdZNOD4We4VzVjnsdGtKHi9lgoLGvmqySSZwFPlaAu10BrcU8Kw2yRXzi3YvtJmQQWNI2DSuaAZs1hKDSzTg09irgvYytc8PpMe3mNW+hqkXSLk0b+bFVL79jpzx6WFeE9wDSoi1HvXjdhDD6gzZLpocINE0ptze0NT9i+2ys9s4VDGUfjHffyrOfgj0yl6naOhTOYu/L7beN06AssopirRcAhRsEJ+dHLtZjzmf6ww8fbeHACcXtaaSm99dPi0jWEb9JMIn12DC+f62EgGo0Yw="
+script: npm run test:coverage
+before_script:
+- npm install codeclimate-test-reporter -g
+after_script:
+- codeclimate-test-reporter < ./coverage/lcov.info
 notifications:
   email:
     recipients:
