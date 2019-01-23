@@ -67,7 +67,7 @@ class Speedometer extends Component {
             const circleDegree = 90 + (index * perLevelDegree);
             return (
               <View
-                key={labels.name}
+                key={level.name}
                 style={[style.halfCircle, {
                   backgroundColor: level.activeBarColor,
                   transform: [
@@ -141,7 +141,7 @@ Speedometer.defaultProps = {
       activeBarColor: '#00ff6b',
     },
   ],
-  needleImage: require('./images/speedometer-needle.png'),
+  needleImage: require('../images/speedometer-needle.png'),
   wrapperStyle: {},
   outerCircleStyle: {},
   imageWrapperStyle: {},

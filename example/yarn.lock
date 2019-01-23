@@ -1184,9 +1184,9 @@ bcrypt-pbkdf@^1.0.0:
     tweetnacl "^0.14.3"
 
 big-integer@^1.6.7:
-  version "1.6.40"
-  resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.40.tgz#02e4cd4d6e266c4d9ece2469c05cb6439149fc78"
-  integrity sha512-CjhtJp0BViLzP1ZkEnoywjgtFQXS2pomKjAJtIISTCnuHILkLcAXLdFLG/nxsHc4s9kJfc+82Xpg8WNyhfACzQ==
+  version "1.6.41"
+  resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.41.tgz#6fb0e51bc8661129ef3832d46c939170b81ca794"
+  integrity sha512-d5AT9lMTYJ/ZE/4gzxb+5ttPcRWljVsvv7lF1w9KzkPhVUhBtHrjDo1J8swfZKepfLsliDhYa31zRYwcD0Yg9w==
 
 bplist-creator@0.0.7:
   version "0.0.7"
@@ -4543,10 +4543,15 @@ react-is@^16.6.3:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
   integrity sha512-Z0VRQdF4NPDoI0tsXVMLkJLiwEBa+RP66g0xDHxgxysxSoCUccSten4RTF/UFvZF1dZvZ9Zu1sx+MDXwcOR34g==
 
-react-native-speedometer@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-speedometer/-/react-native-speedometer-1.0.0.tgz#eff74ecf4fcbe67d9f4815d4eb9b91d8896f304e"
-  integrity sha512-i/uM/9W6EYCCUlzf6tI++lJSnuomnL5w9RTO+ncE9b4/e+nzhASPoezAqp6PE6J8jx8I9tlWk4i8JMoG6AyWTA==
+react-native-speedometer@./react-native-speedometer-1.0.1.tgz:
+  version "1.0.1"
+  resolved "./react-native-speedometer-1.0.1.tgz#f97bf55ec03d8f74d5b4f218b85a8afe79d33b6a"
+  dependencies:
+    prop-types "^15.6.2"
+
+react-native-speedometer@./react-native-speedometer-1.0.2.tgz:
+  version "1.0.2"
+  resolved "./react-native-speedometer-1.0.2.tgz#abaa89d6ff0e3cfcec6c6ce44b18276622d7a3e1"
   dependencies:
     prop-types "^15.6.2"
 
@@ -5779,9 +5784,9 @@ write-file-atomic@^1.2.0:
     slide "^1.1.5"
 
 write-file-atomic@^2.1.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-2.3.0.tgz#1ff61575c2e2a4e8e510d6fa4e243cce183999ab"
-  integrity sha512-xuPeK4OdjWqtfi59ylvVL0Yn35SF3zgcAcv7rBPFHVaEapaDr4GdGgm3j7ckTwH9wHL7fGmgfAnb0+THrHb8tA==
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-2.4.2.tgz#a7181706dfba17855d221140a9c06e15fcdd87b9"
+  integrity sha512-s0b6vB3xIVRLWywa6X9TOMA7k9zio0TMOsl9ZnDkliA/cfJlpHXAscj0gbHVJiTdIuAYpIyqS5GW91fqm6gG5g==
   dependencies:
     graceful-fs "^4.1.11"
     imurmurhash "^0.1.4"
