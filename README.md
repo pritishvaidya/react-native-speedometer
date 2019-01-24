@@ -44,7 +44,7 @@ class App extends Component {
      return (
         <SafeAreaView style={style.container}>
           <TextInput placeholder="Speedometer Value" style={styles.textInput} onChangeText={this.onChange} />
-          <RNSpeedometer value={this.state.value} />
+          <RNSpeedometer value={this.state.value} size={200}/>
         </SafeAreaView>
       );
   }
@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
 | Prop  | Default  | Type | Description |
 | :------------ |---------------:| :---------------| :-----|
 | value | required | number | Current Value |
+| size | [Default Labels](#defaults) | number | Size |
 | defaultValue | 50 | number | Default Value |
 | minValue | 0 | number | Minimum Limit |
 | maxValue | 100 | number | Maximum Value |
@@ -77,6 +78,7 @@ const styles = StyleSheet.create({
 | needleImage | [Default Needle Image](#defaults) | string | Absolute path to the Needle Image |
 | wrapperStyle | {} | object | Wrapper Style |
 | outerCircleStyle   | {} | object | Outer Circle Style |
+| halfCircleStyle   | {} | object | Half Circle Style |
 | imageWrapperStyle | {} | object | Needle Image Wrapper Style |
 | imageStyle | {} | object | Needle Image Style |
 | innerCircleStyle | {} | object | Inner Circle Style |
@@ -86,6 +88,7 @@ const styles = StyleSheet.create({
 
 ### Defaults
 ```
+  size: deviceWidth - 20,
   defaultValue: 50,
   minValue: 0,
   maxValue: 100,
@@ -125,6 +128,7 @@ const styles = StyleSheet.create({
   needleImage: require('./images/speedometer-needle.png'),
   wrapperStyle: {},
   outerCircleStyle: {},
+  halfCircleStyle: {},
   imageWrapperStyle: {},
   imageStyle: {},
   innerCircleStyle: {},
