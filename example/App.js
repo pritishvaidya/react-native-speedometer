@@ -38,7 +38,7 @@ export default class App extends Component<Props> {
     return (
       <SafeAreaView style={styles.container}>
         <TextInput placeholder="Speedometer Value" style={styles.textInput} onChangeText={this.onChange} />
-        <RNSpeedometer value={this.state.value} />
+        <RNSpeedometer value={this.state.value} size={200} />
       </SafeAreaView>
     );
   }
