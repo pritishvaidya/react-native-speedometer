@@ -5,8 +5,12 @@ exports[`Main Component Tests main component details should render the component
   style={
     Array [
       Object {
-        "marginHorizontal": 10,
+        "alignSelf": "center",
         "marginVertical": 5,
+      },
+      Object {
+        "height": 365,
+        "width": 730,
       },
       Object {},
     ]
@@ -19,11 +23,13 @@ exports[`Main Component Tests main component details should render the component
           "alignItems": "center",
           "backgroundColor": "#e6e6e6",
           "borderColor": "#ffffff",
+          "justifyContent": "flex-end",
+          "overflow": "hidden",
+        },
+        Object {
           "borderTopLeftRadius": 365,
           "borderTopRightRadius": 365,
           "height": 365,
-          "justifyContent": "flex-end",
-          "overflow": "hidden",
           "width": 730,
         },
         Object {},
@@ -35,16 +41,15 @@ exports[`Main Component Tests main component details should render the component
         Array [
           Object {
             "borderBottomRightRadius": 0,
-            "borderRadius": 375,
             "borderTopRightRadius": 0,
-            "height": 750,
             "left": 0,
             "position": "absolute",
             "top": 0,
-            "width": 375,
           },
           Object {
             "backgroundColor": "#ff2900",
+            "borderRadius": 365,
+            "height": 730,
             "transform": Array [
               Object {
                 "translateX": 182.5,
@@ -53,10 +58,12 @@ exports[`Main Component Tests main component details should render the component
                 "rotate": "90deg",
               },
               Object {
-                "translateX": -192.5,
+                "translateX": -182.5,
               },
             ],
+            "width": 365,
           },
+          Object {},
         ]
       }
     />
@@ -65,16 +72,15 @@ exports[`Main Component Tests main component details should render the component
         Array [
           Object {
             "borderBottomRightRadius": 0,
-            "borderRadius": 375,
             "borderTopRightRadius": 0,
-            "height": 750,
             "left": 0,
             "position": "absolute",
             "top": 0,
-            "width": 375,
           },
           Object {
             "backgroundColor": "#ff5400",
+            "borderRadius": 365,
+            "height": 730,
             "transform": Array [
               Object {
                 "translateX": 182.5,
@@ -83,10 +89,12 @@ exports[`Main Component Tests main component details should render the component
                 "rotate": "120deg",
               },
               Object {
-                "translateX": -192.5,
+                "translateX": -182.5,
               },
             ],
+            "width": 365,
           },
+          Object {},
         ]
       }
     />
@@ -95,16 +103,15 @@ exports[`Main Component Tests main component details should render the component
         Array [
           Object {
             "borderBottomRightRadius": 0,
-            "borderRadius": 375,
             "borderTopRightRadius": 0,
-            "height": 750,
             "left": 0,
             "position": "absolute",
             "top": 0,
-            "width": 375,
           },
           Object {
             "backgroundColor": "#f4ab44",
+            "borderRadius": 365,
+            "height": 730,
             "transform": Array [
               Object {
                 "translateX": 182.5,
@@ -113,10 +120,12 @@ exports[`Main Component Tests main component details should render the component
                 "rotate": "150deg",
               },
               Object {
-                "translateX": -192.5,
+                "translateX": -182.5,
               },
             ],
+            "width": 365,
           },
+          Object {},
         ]
       }
     />
@@ -125,16 +134,15 @@ exports[`Main Component Tests main component details should render the component
         Array [
           Object {
             "borderBottomRightRadius": 0,
-            "borderRadius": 375,
             "borderTopRightRadius": 0,
-            "height": 750,
             "left": 0,
             "position": "absolute",
             "top": 0,
-            "width": 375,
           },
           Object {
             "backgroundColor": "#f2cf1f",
+            "borderRadius": 365,
+            "height": 730,
             "transform": Array [
               Object {
                 "translateX": 182.5,
@@ -143,10 +151,12 @@ exports[`Main Component Tests main component details should render the component
                 "rotate": "180deg",
               },
               Object {
-                "translateX": -192.5,
+                "translateX": -182.5,
               },
             ],
+            "width": 365,
           },
+          Object {},
         ]
       }
     />
@@ -155,16 +165,15 @@ exports[`Main Component Tests main component details should render the component
         Array [
           Object {
             "borderBottomRightRadius": 0,
-            "borderRadius": 375,
             "borderTopRightRadius": 0,
-            "height": 750,
             "left": 0,
             "position": "absolute",
             "top": 0,
-            "width": 375,
           },
           Object {
             "backgroundColor": "#14eb6e",
+            "borderRadius": 365,
+            "height": 730,
             "transform": Array [
               Object {
                 "translateX": 182.5,
@@ -173,10 +182,12 @@ exports[`Main Component Tests main component details should render the component
                 "rotate": "210deg",
               },
               Object {
-                "translateX": -192.5,
+                "translateX": -182.5,
               },
             ],
+            "width": 365,
           },
+          Object {},
         ]
       }
     />
@@ -185,16 +196,15 @@ exports[`Main Component Tests main component details should render the component
         Array [
           Object {
             "borderBottomRightRadius": 0,
-            "borderRadius": 375,
             "borderTopRightRadius": 0,
-            "height": 750,
             "left": 0,
             "position": "absolute",
             "top": 0,
-            "width": 375,
           },
           Object {
             "backgroundColor": "#00ff6b",
+            "borderRadius": 365,
+            "height": 730,
             "transform": Array [
               Object {
                 "translateX": 182.5,
@@ -203,10 +213,12 @@ exports[`Main Component Tests main component details should render the component
                 "rotate": "240deg",
               },
               Object {
-                "translateX": -192.5,
+                "translateX": -182.5,
               },
             ],
+            "width": 365,
           },
+          Object {},
         ]
       }
     />
@@ -215,7 +227,7 @@ exports[`Main Component Tests main component details should render the component
         Object {
           "left": 0,
           "position": "absolute",
-          "top": -22,
+          "top": -48.666666666666664,
           "transform": Array [
             Object {
               "rotate": "0deg",
@@ -238,6 +250,10 @@ exports[`Main Component Tests main component details should render the component
               "resizeMode": "stretch",
               "width": 730,
             },
+            Object {
+              "height": 730,
+              "width": 730,
+            },
             Object {},
           ]
         }
@@ -255,6 +271,12 @@ exports[`Main Component Tests main component details should render the component
             "justifyContent": "flex-end",
             "overflow": "hidden",
             "width": 450,
+          },
+          Object {
+            "borderTopLeftRadius": 365,
+            "borderTopRightRadius": 365,
+            "height": 219,
+            "width": 438,
           },
           Object {},
         ]

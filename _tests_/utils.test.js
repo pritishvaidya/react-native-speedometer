@@ -1,6 +1,7 @@
 import calculateDegreeFromLabels from '../src/utils/calculate-degree-from-labels';
 import calculateLabelFromValue from '../src/utils/calculate-label-from-value';
 import limitValue from '../src/utils/limit-value';
+import validateSize from '../src/utils/validate-size';
 
 describe('Testing Utility functions', () => {
   describe('calculate-degree-from-labels utility method', () => {
@@ -39,6 +40,21 @@ describe('Testing Utility functions', () => {
       expect(Math.min(
         Math.max(value, minValue), maxValue,
       )).toBe(limitValue(value, minValue, maxValue));
+    });
+  });
+
+  describe('validate-size utility method', () => {
+    let value = null;
+    const original = 200;
+    it('should check if size is a number', () => {
+      value = NaN;
+      expect(validateSize(value, original)).toBe(original);
+    });
+
+    it('should return current size value', () => {
+      value = 50;
+      expect(value).not.toBeNaN();
+      expect(value).toBe(validateSize(value, original));
     });
   });
 });
