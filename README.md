@@ -14,6 +14,7 @@ A Customizable Speedometer Implementation in React Native
 - [Properties](#properties)
 - [Defaults](#defaults)
 - [Contribution](#contribution)
+- [TODOS](#todos)
 - [Questions](#questions)
 
 ### Installation
@@ -140,6 +141,10 @@ const styles = StyleSheet.create({
 ## Contribution
 
 - [@pritishvaidya](mailto:pritishvaidya94@gmail.com) The main author.
+
+## TODOS
+- Provision to remove `labels` and `labelIndex`.
+- Unequal Split of chart (Need Help)
 
 ## Questions
 
