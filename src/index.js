@@ -33,6 +33,7 @@ class Speedometer extends Component {
       minValue,
       maxValue,
       easeDuration,
+      allowedDecimals,
       labels,
       needleImage,
       wrapperStyle,
@@ -48,12 +49,12 @@ class Speedometer extends Component {
     const degree = 180;
     const perLevelDegree = calculateDegreeFromLabels(degree, labels);
     const label = calculateLabelFromValue(
-      limitValue(value, minValue, maxValue), labels, minValue, maxValue,
+      limitValue(value, minValue, maxValue, allowedDecimals), labels, minValue, maxValue,
     );
     Animated.timing(
       this.speedometerValue,
       {
-        toValue: limitValue(value, minValue, maxValue),
+        toValue: limitValue(value, minValue, maxValue, allowedDecimals),
         duration: easeDuration,
         easing: Easing.linear,
       },
@@ -125,7 +126,7 @@ class Speedometer extends Component {
           <Text style={
             [style.label, labelStyle]}
           >
-            {limitValue(value, minValue, maxValue)}
+            {limitValue(value, minValue, maxValue, allowedDecimals)}
           </Text>
           <Text style={
             [style.labelNote, { color: label.labelColor }, labelNoteStyle]}
@@ -143,6 +144,7 @@ Speedometer.defaultProps = {
   minValue: 0,
   maxValue: 100,
   easeDuration: 500,
+  allowedDecimals: 0,
   labels: [
     {
       name: 'Pathetically weak',
@@ -194,6 +196,7 @@ Speedometer.propTypes = {
   minValue: PropTypes.number,
   maxValue: PropTypes.number,
   easeDuration: PropTypes.number,
+  allowedDecimals: PropTypes.number,
   labels: PropTypes.array,
   needleImage: PropTypes.any,
   wrapperStyle: PropTypes.object,
