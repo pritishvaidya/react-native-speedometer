@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
 | defaultValue | 50 | number | Default Value |
 | minValue | 0 | number | Minimum Limit |
 | maxValue | 100 | number | Maximum Value |
+| allowedDecimals | 0 | number | Allowed Decimal Places |
 | easeDuration | 500| number | Ease Duration for the Needle animation |
 | labels | [Default Labels](#defaults) | array | Labels List |
 | needleImage | [Default Needle Image](#defaults) | string | Absolute path to the Needle Image |
