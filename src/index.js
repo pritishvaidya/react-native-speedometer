@@ -45,6 +45,7 @@ class Speedometer extends Component {
       labelWrapperStyle,
       labelStyle,
       labelNoteStyle,
+      useNativeDriver
     } = this.props;
     const degree = 180;
     const perLevelDegree = calculateDegreeFromLabels(degree, labels);
@@ -57,6 +58,7 @@ class Speedometer extends Component {
         toValue: limitValue(value, minValue, maxValue, allowedDecimals),
         duration: easeDuration,
         easing: Easing.linear,
+        useNativeDriver: useNativeDriver
       },
     ).start();
 
@@ -187,6 +189,7 @@ Speedometer.defaultProps = {
   labelWrapperStyle: {},
   labelStyle: {},
   labelNoteStyle: {},
+  useNativeDriver: true
 };
 
 Speedometer.propTypes = {
@@ -208,6 +211,7 @@ Speedometer.propTypes = {
   labelWrapperStyle: PropTypes.object,
   labelStyle: PropTypes.object,
   labelNoteStyle: PropTypes.object,
+  useNativeDriver: PropTypes.bool
 };
 
 export default Speedometer;
