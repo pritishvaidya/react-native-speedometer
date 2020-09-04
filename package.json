@@ -1,6 +1,6 @@
 {
   "name": "react-native-speedometer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Customizable Speedometer Implementation in React Native",
   "main": "dist/react-native-speedometer.cjs.js",
   "jsnext:main": "dist/react-native-speedometer.esm.js",
