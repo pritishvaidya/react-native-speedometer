@@ -29,6 +29,8 @@ class Speedometer extends Component {
   render() {
     const {
       value,
+      valueFormatter,
+      hideValue,
       size,
       minValue,
       maxValue,
@@ -45,6 +47,8 @@ class Speedometer extends Component {
       labelWrapperStyle,
       labelStyle,
       labelNoteStyle,
+      labelsNoteFormatter,
+      hideLabelsNote,
       useNativeDriver,
     } = this.props;
     const degree = 180;
@@ -85,7 +89,7 @@ class Speedometer extends Component {
             const circleDegree = 90 + (index * perLevelDegree);
             return (
               <View
-                key={level.name}
+                key={level.key || level.name}
                 style={[style.halfCircle, {
                   backgroundColor: level.activeBarColor,
                   width: currentSize / 2,
@@ -128,12 +132,12 @@ class Speedometer extends Component {
           <Text style={
             [style.label, labelStyle]}
           >
-            {limitValue(value, minValue, maxValue, allowedDecimals)}
+            {hideValue ? '' : valueFormatter(limitValue(value, minValue, maxValue, allowedDecimals))}
           </Text>
           <Text style={
             [style.labelNote, { color: label.labelColor }, labelNoteStyle]}
           >
-            {label.name}
+            {hideLabelsNote ? '' : labelsNoteFormatter(label.name)}
           </Text>
         </View>
       </View>
@@ -143,6 +147,8 @@ class Speedometer extends Component {
 
 Speedometer.defaultProps = {
   defaultValue: 50,
+  valueFormatter: value => value,
+  hideValue: false,
   minValue: 0,
   maxValue: 100,
   easeDuration: 500,
@@ -189,12 +195,16 @@ Speedometer.defaultProps = {
   labelWrapperStyle: {},
   labelStyle: {},
   labelNoteStyle: {},
+  labelsNoteFormatter: note => note,
+  hideLabelsNote: false,
   useNativeDriver: true,
 };
 
 Speedometer.propTypes = {
   value: PropTypes.number.isRequired,
   defaultValue: PropTypes.number,
+  valueFormatter: PropTypes.func,
+  hideValue: PropTypes.bool,
   size: PropTypes.number,
   minValue: PropTypes.number,
   maxValue: PropTypes.number,
@@ -211,6 +221,8 @@ Speedometer.propTypes = {
   labelWrapperStyle: PropTypes.object,
   labelStyle: PropTypes.object,
   labelNoteStyle: PropTypes.object,
+  labelsNoteFormatter: PropTypes.func,
+  hideLabelsNote: PropTypes.bool,
   useNativeDriver: PropTypes.bool,
 };
 
