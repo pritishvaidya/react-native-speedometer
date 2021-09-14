@@ -29,6 +29,7 @@ class Speedometer extends Component {
   render() {
     const {
       value,
+      valueDescription,
       size,
       minValue,
       maxValue,
@@ -128,7 +129,7 @@ class Speedometer extends Component {
           <Text style={
             [style.label, labelStyle]}
           >
-            {limitValue(value, minValue, maxValue, allowedDecimals)}
+            {limitValue(value, minValue, maxValue, allowedDecimals) ,valueDescription}
           </Text>
           <Text style={
             [style.labelNote, { color: label.labelColor }, labelNoteStyle]}
@@ -194,6 +195,7 @@ Speedometer.defaultProps = {
 
 Speedometer.propTypes = {
   value: PropTypes.number.isRequired,
+  valueDescription:PropTypes.string,
   defaultValue: PropTypes.number,
   size: PropTypes.number,
   minValue: PropTypes.number,
