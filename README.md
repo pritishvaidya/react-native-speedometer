@@ -95,34 +95,40 @@ const styles = StyleSheet.create({
   minValue: 0,
   maxValue: 100,
   easeDuration: 500,
-  labels: [
+    labels: [
     {
-      name: 'Too Slow',
+      id: 1,
+      name: 'Pathetically weak',
       labelColor: '#ff2900',
       activeBarColor: '#ff2900',
     },
     {
-      name: 'Very Slow',
+      id: 2,
+      name: 'Very weak',
       labelColor: '#ff5400',
       activeBarColor: '#ff5400',
     },
     {
-      name: 'Slow',
+      id: 3,
+      name: 'So-so',
       labelColor: '#f4ab44',
       activeBarColor: '#f4ab44',
     },
     {
-      name: 'Normal',
+      id: 4,
+      name: 'Fair',
       labelColor: '#f2cf1f',
       activeBarColor: '#f2cf1f',
     },
     {
-      name: 'Fast',
+      id: 5,
+      name: 'Strong',
       labelColor: '#14eb6e',
       activeBarColor: '#14eb6e',
     },
     {
-      name: 'Unbelievably Fast',
+      id: 6,
+      name: 'Unbelievably strong',
       labelColor: '#00ff6b',
       activeBarColor: '#00ff6b',
     },
@@ -137,6 +143,49 @@ const styles = StyleSheet.create({
   labelWrapperStyle: {},
   labelStyle: {},
   labelNoteStyle: {},
+```
+### Hide Labels
+```
+
+    labels: [
+    {
+      id: 1,
+      name: '',
+      labelColor: '#ff2900',
+      activeBarColor: '#ff2900',
+    },
+    {
+      id: 2,
+      name: '',
+      labelColor: '#ff5400',
+      activeBarColor: '#ff5400',
+    },
+    {
+      id: 3,
+      name: '',
+      labelColor: '#f4ab44',
+      activeBarColor: '#f4ab44',
+    },
+    {
+      id: 4,
+      name: '',
+      labelColor: '#f2cf1f',
+      activeBarColor: '#f2cf1f',
+    },
+    {
+      id: 5,
+      name: '',
+      labelColor: '#14eb6e',
+      activeBarColor: '#14eb6e',
+    },
+    {
+      id: 6,
+      name: '',
+      labelColor: '#00ff6b',
+      activeBarColor: '#00ff6b',
+    },
+  ],
+ 
 ```
 
 ## Contribution

@@ -85,7 +85,7 @@ class Speedometer extends Component {
             const circleDegree = 90 + (index * perLevelDegree);
             return (
               <View
-                key={level.name}
+                key={level.id}
                 style={[style.halfCircle, {
                   backgroundColor: level.activeBarColor,
                   width: currentSize / 2,
@@ -149,31 +149,37 @@ Speedometer.defaultProps = {
   allowedDecimals: 0,
   labels: [
     {
+      id: 1,
       name: 'Pathetically weak',
       labelColor: '#ff2900',
       activeBarColor: '#ff2900',
     },
     {
+      id: 2,
       name: 'Very weak',
       labelColor: '#ff5400',
       activeBarColor: '#ff5400',
     },
     {
+      id: 3,
       name: 'So-so',
       labelColor: '#f4ab44',
       activeBarColor: '#f4ab44',
     },
     {
+      id: 4,
       name: 'Fair',
       labelColor: '#f2cf1f',
       activeBarColor: '#f2cf1f',
     },
     {
+      id: 5,
       name: 'Strong',
       labelColor: '#14eb6e',
       activeBarColor: '#14eb6e',
     },
     {
+      id: 6,
       name: 'Unbelievably strong',
       labelColor: '#00ff6b',
       activeBarColor: '#00ff6b',
