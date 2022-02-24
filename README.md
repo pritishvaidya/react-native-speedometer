@@ -95,34 +95,34 @@ const styles = StyleSheet.create({
   minValue: 0,
   maxValue: 100,
   easeDuration: 500,
-  labels: [
+    labels: [
     {
-      name: 'Too Slow',
+      name: 'Pathetically weak',
       labelColor: '#ff2900',
       activeBarColor: '#ff2900',
     },
     {
-      name: 'Very Slow',
+      name: 'Very weak',
       labelColor: '#ff5400',
       activeBarColor: '#ff5400',
     },
     {
-      name: 'Slow',
+      name: 'So-so',
       labelColor: '#f4ab44',
       activeBarColor: '#f4ab44',
     },
     {
-      name: 'Normal',
+      name: 'Fair',
       labelColor: '#f2cf1f',
       activeBarColor: '#f2cf1f',
     },
     {
-      name: 'Fast',
+      name: 'Strong',
       labelColor: '#14eb6e',
       activeBarColor: '#14eb6e',
     },
     {
-      name: 'Unbelievably Fast',
+      name: 'Unbelievably strong',
       labelColor: '#00ff6b',
       activeBarColor: '#00ff6b',
     },
